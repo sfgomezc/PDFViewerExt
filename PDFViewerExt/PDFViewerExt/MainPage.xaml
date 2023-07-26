@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDFViewerExt.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3"
+               Padding="24"
+               CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   FontSize="36"/>
+        </Frame>
+        <Label Text="Visor de PDF"
+               FontSize="Title"
+               Padding="30,10,30,10"/>
+        <Label Text="Descarga archivo PDF desde URL y se abre con app externa"
+               FontSize="16"
+               Padding="30,0,30,0"/>
+        <Label FontSize="16"
+               Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Ruta del PDF "/>
+                        <Span Text="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                              FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Button Text="Descarga y abre PDF"
+                HorizontalOptions="Center"
+                Clicked="LauncherButtonOnClicked"/>
+        <Label Text="Abre un archivo PDF local (embebido) y se abre con app externa"
+               FontSize="16"
+               Padding="30,0,30,0"/>
+        <Button Text="Abrir PDF local"
+                HorizontalOptions="Center"
+                Clicked="OpenButtonOnClicked"/>
+    </StackLayout>
+
+</ContentPage>
